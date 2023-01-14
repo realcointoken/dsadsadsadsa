@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+body {
+    background-color: var(--color1);
+}
+
+#mainContainer {
+    background: url("../svg/bg_wave_whale_btc_notcolor_mb.svg") no-repeat center center;
+    background-size: 100%;
+}
+
+#sectionContent {
+    background-image: linear-gradient(180deg, var(--color3), transparent);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding: 40px;
+    backdrop-filter: blur(1px);
+}
+
+#textHeadline {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 70vh;
+    width: 100%;
+    max-width: 650px;
+}
+
+#textHeadline h1 {
+    color: var(--color2);
+    font-family: var(--font1);
+    font-size: 2.5rem;
+    line-height: 40px;
+    text-shadow: 4px 4px 10px var(--color1);
+}
+
+#textHeadline p {
+    color: var(--color2);
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    text-shadow: 4px 4px 10px var(--color1);
+}
+
+.btnInit {
+    animation: activeBtn 0.8s ease infinite alternate;
+    background-color: var(--color3);
+    border: 3px double var(--color2);
+    border-radius: 5px;
+    font-family: var(--font1);
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: auto;
+    padding: 5px;
+    transition-duration: 0.1s;
+    width: 100%;
+    max-width: 350px;
+}
+
+.btnInit:hover {
+    animation: none;
+    box-shadow: 1px 1px 10px var(--colorD2);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#btnInitMob {
+    display: block;
+}
+
+#btnInitDesk {
+    display: none;
+}
+
+#containerTopics {
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.cellTopics {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 820px;
+}
+
+.cellTopics div {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    width: 100%;
+    max-width: 80px;
+}
+
+.iconSvgTopics {
+    width: 100%;
+}
+
+.cellTopics p {
+    color: var(--color2);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+@keyframes activeBtn {
+    from {box-shadow: 1px 1px 5px var(--colorD2);}
+    to {box-shadow: 2px 2px 10px var(--colorD2);}
+}
+
+@media (min-width: 420px) {
+    #mainContainer {
+        background-image: url("../svg/bg_wave_whale_btc_notcolor_tb.svg");
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 820px) {
+    #containerTopics {
+        padding-bottom: 100px
+    }
+    .cellTopics p {
+        width: 80%;
+    }
+    #cellTopicsDesc, #cellTopicsScar {
+        flex-direction: row;
+    }
+    #cellTopicsOpen, #cellTopicsPriv {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 960px) {
+    #mainContainer {
+        background-image: url("../svg/bg_wave_whale_btc_notcolor_dk.svg");
+        background-size: 100%;
+    }
+    #btnInitMob {
+        display: none;
+    }
+    #btnInitDesk {
+        display: block;
+        margin: 0;
+        position: fixed;
+        top: 90%;
+        left: 2%;
+    }
+}
